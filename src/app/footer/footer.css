@@ -1,0 +1,19 @@
+body{
+    font-family: 'Underdog', cursive;
+    margin: 0;
+    padding: 0;
+     display: flex;
+  flex-direction: column;
+}
+
+.bg-color-info {
+	background-color: #e1f3da;
+    font-weight: bolder;
+}
+
+ 
+footer {
+    padding: 15px;
+    text-align: center;
+    
+  } 

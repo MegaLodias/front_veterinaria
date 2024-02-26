@@ -1,0 +1,80 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProyectoPW</title>
+</head>
+<body>
+    <link rel="stylesheet" href="../vistaproductos/vistaproductos.css">
+    <div class="containerVP">
+        <!-- Botón para abrir el modal de agregar producto -->
+        <button id="btnAgregarProducto" onclick="mostrarFormularioAgregarProducto()">Agregar Producto</button>
+
+        <!-- Modal de agregar producto -->
+        <div id="modalAgregarProducto" class="modal" style="display: none;">
+            <div class="modal-contenido">
+                <h2>Nuevo Producto</h2>
+                <form id="formNuevoProducto" class="two-column-form" >
+                    <!-- Contenido del formulario para agregar producto -->
+                    <div class="form-group">
+                        <label for="categorias">Categoría:</label>
+                        <select id="categorias" placeholder="Categoría">
+                            <option value="" disabled selected>Selecciona una categoría</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" >
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion">Descripción:</label>
+                        <textarea id="descripcion" ></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="stock">Stock:</label>
+                        <input type="number" id="stock" >
+                    </div>
+                    <div class="form-group">
+                        <label for="precio">Precio:</label>
+                        <input type="number" id="precio" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <label for="Foto">Foto:</label>
+                        <input type="text" id="Foto" placeholder="Agregar URL para la foto">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" onclick="insertarProductoCategoria()">Agregar</button>
+                        <button type="button" onclick="cerrarFormularioAgregarProducto()">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+
+        <!-- Tabla de productos -->
+        <table class="table">
+            <caption>Productos</caption>
+            <thead>
+                <tr>
+                    <th>Categoría</th> 
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Acción Actualizar</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <!-- Aquí se mostrarán los productos -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="modal" class="modal">
+        <div id="modal-contenido-actualizar" class="modal-contenido">
+            <!-- Aquí irá el formulario de edición -->
+        </div>
+    </div>
+
+    <script src="../vistaproductos/vistaproductos.js"></script>
+    <script src="../verificarAcceso.js"></script>
+    
+</body>

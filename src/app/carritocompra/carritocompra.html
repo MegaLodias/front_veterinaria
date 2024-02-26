@@ -1,0 +1,91 @@
+<!-- Carrito de Compras -->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="carritocompra.css">
+        <title>ProyectoPW</title>
+        <link rel="icon" href="../../assets/img/logo.png" type="image/x-icon">
+        
+</head>
+
+<body>
+    <ul class='nav-bar'>
+    <!-- Aqui es el navbar dinamico -->
+    </ul>
+
+<section class="seccion-facturas">
+<div class="carrito" id="carrito">
+    <div class="header-carrito">
+        <h2>Tu Carrito</h2>
+    </div>
+
+    <div class="carrito-items">
+        <div class="carrito-item">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unitario</th>
+                        <th>Precio Total</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    <tr>
+                        <td>Selecciona</td>
+                        <td>los artículos</td>
+                        <td>en la pestaña</td>
+                        <td>Productos</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- <div class="carrito-item-detalles">
+                <span class="carrito-item-titulo">Box Engasse</span>
+                <div class="selector-cantidad">
+                    <i class="fa-solid fa-minus restar-cantidad"></i>
+                    <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                    <i class="fa-solid fa-plus sumar-cantidad"></i>
+                </div>
+                <span class="carrito-item-precio">$15.000,00</span>
+            </div> -->
+            <!-- <span class="btn-eliminar">
+                <i class="fa-solid fa-trash"></i>
+            </span> -->
+        
+        
+        
+    </div>
+    <div class="carrito-total">
+        <div class="fila">
+            <strong>Tu Total</strong>
+            <span id="precioTotal"  class="carrito-precio-total"></span>
+        </div>
+        <button class="btn-pagar" onclick="pagarFactura()">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+    </div>
+</div>
+
+</section>
+
+
+<!-- comunicate con nosotros mediante wsp -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="https://api.whatsapp.com/send?phone=+593 96 700 2303&text=Hola, deseo obtener más información" class="float" target="_blank">
+<i class="fa fa-whatsapp my-float "></i>
+</a>
+
+<script src="carritocompra.js"></script>
+<script src="../verificarAcceso.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+</body>
+<!-- fotter -->
+<footer class="container-fluid bg-color-info p-3 font-color-general text-center" >
+    <p class="m-3">
+        DOLITTLE © 2024 - Todos los derechos reservados
+        <br>
+        Machala, El Oro, Ecuador.
+    </p>
+</footer>
+<!-- finfooter -->

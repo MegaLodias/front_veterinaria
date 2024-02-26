@@ -1,0 +1,69 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="productos.css">
+        <title>ProyectoPW</title>
+        <link rel="icon" href="../../assets/img/logo.png" type="image/x-icon">
+        
+</head>
+<body>
+    <!-- navbar -->
+    <ul class='nav-bar'>
+        <!-- Aqui es el navbar dinamico -->
+    </ul>
+    <!-- FIN NAVBAR -->
+    <header>
+        <h1 class="text-center mt-4 mb-4">Nuestros Productos</h1>
+    <div class="row mt-4">
+        <div class="col-md-12 text-center">
+            <button class="btn btn-lila" onclick="obtenerProductos()">Todos</button>
+            <button class="btn btn-lila" onclick="obtenerProductosCategoria('Caninos')">Caninos</button>
+            <button class="btn btn-lila" onclick="obtenerProductosCategoria('Felinos')">Felinos</button>
+            <button class="btn btn-lila" onclick="obtenerProductosCategoria('Ovinos')">Ovinos</button>
+            <button class="btn btn-lila" onclick="obtenerProductosCategoria('Porcionos')">Porcionos</button>
+            <button class="btn btn-lila" onclick="obtenerProductosCategoria('Equinos')">Equinos</button>
+            <button class="btn btn-lila" onclick="obtenerProductosCategoria('Bovinos')">Bovinos</button>
+            <button class="btn btn-lila" onclick="obtenerProductosCategoria('Aves')">Aves</button>
+            <button class="btn btn-lila" onclick="obtenerProductosCategoria('Alimentos Mascotas')">Alimentos Mascotas</button>
+
+        </div>
+    </div>
+    </header>
+    <div class="iniciarcompra">
+        <button class="btn btn-lila"  id="btn-compra" onclick="compraIniciada()">INICIA COMPRA</button>
+    </div>
+    
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+            <!-- AQUI SE CARGAN LOS PRODUCTOS DIRECTO DEL JS O LA API PSDTA: MADEE 
+            <div id="mensajeProductos"></div> -->
+            <div id="mensajeProductos"></div>
+            <div id="productosContainer"></div>
+        </div>
+    </section>
+    <!-- comunicate con nosotros mediante wsp -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://api.whatsapp.com/send?phone=+593 96 700 2303&text=Hola, deseo obtener más información" class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float "></i>
+    </a>
+
+<!-- fin comunicate con nosotros -->
+<script src="productos.js"></script>
+<script src="../verificarAcceso.js"></script>
+<!-- Incluir SweetAlert en tu HTML -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+    <!-- fotter -->
+
+<footer class="container-fluid bg-color-info p-3 font-color-general text-center">
+    <p class="m-3">
+        DOLITTLE © 2024 - Todos los derechos reservados
+        <br>
+        Machala, El Oro, Ecuador.
+    </p>
+</footer>
+
+<!-- finfooter -->

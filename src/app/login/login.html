@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="../../assets/img/logo.png" type="image/x-icon">
+    <title>ProyectoPW</title>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form id="signup-form"> 
+                <h1>Crea una cuenta</h1>
+                <div class="input-columns">
+                    <div class="input-column">
+                        <input type="text" id="nombre" placeholder="Nombre">
+                        <span class="error-message" id="nombre-error"></span>
+                        <input type="text" id="apellido" placeholder="Apellido">
+                        <span class="error-message" id="apellido-error"></span>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Cedula" id="cedula" required>
+                            <span class="error-message" id="cedula-required" style="display: none;"></span>
+                            <span class="error-message" id="cedula-invalid" style="display: none;"></span>
+                        </div>                             
+                        <input type="text" id="Foto" placeholder="Agregar URL para la foto">
+
+                    </div>
+                    <div class="input-column">
+                        <select id="cantonesComboBox" placeholder="Canton"></select>
+                        <span class="error-message" id="cantonesComboBox-error" style="display: none;">Seleccione una opción.</span>
+                        <input type="text" id="direccion" placeholder="Direccion">
+                        <span class="error-message" id="direccion-error"></span>
+                        <input type="text" id="codigoPostal" placeholder="Codigo Postal">
+                        <span class="error-message" id="codigoPostal-error"></span>
+                        <input type="text" id="correo" placeholder="Correo electrónico">
+                        <span class="error-message" id="correo-error"></span>
+                        <input type="text" id="contrasena" placeholder="Contraseña">   
+                        <span class="error-message" id="contrasena-error"></span>                  
+                    </div>
+                </div>
+                <button id="register-btn" onclick="registrarUsuario()" disabled>Registrate</button>
+            </form>
+        </div>
+        
+        
+        <div class="form-container sign-in">
+            <form>
+                <h1>Inicia Sesion</h1>
+                <span>Usando tu correo</span>
+                <input type="email" id="email" name="email" placeholder="Correo Electronico">
+                <input type="password" id="password" name="password" placeholder="Contraseña">
+                <!-- <a href="#">Olvidaste tu contraseña?</a> -->
+                <a href="../home/home.html">PAGINA PRINCIPAL</a>
+                <button type="button" onclick="iniciarSesion()">Inicia Sesion</button>
+                <p id="mensaje"></p>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Bienvenido otra vez!</h1>
+                    <p>Ingrese sus datos para entrar al sitio</p>
+                    <button class="hidden" id="login">Inicie Sesion</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Bienvenido!</h1>
+                    <p>Registre sus datos para ingresar al sitio</p>
+                    <button class="hidden" id="register">Registrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- comunicate con nosotros mediante wsp -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://api.whatsapp.com/send?phone=+593 96 700 2303&text=Hola, deseo obtener más información" class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float "></i>
+    </a>
+
+<!-- fin comunicate con nosotros -->
+
+    <script src="login.js"></script>
+    <script src="validaciones.js"></script>
+      <!-- Incluir SweetAlert en tu HTML -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

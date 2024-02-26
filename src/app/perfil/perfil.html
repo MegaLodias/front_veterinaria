@@ -1,0 +1,119 @@
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="perfil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <title>ProyectoPW</title>
+    <link rel="icon" href="../../assets/img/logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+<!-- navbar -->
+
+<ul class='nav-bar'>
+    <!-- Llama a navbar dinamico -->
+</ul>
+
+<!-- FIN NAVBAR -->
+
+
+        <section class="seccion-perfil-usuario">
+            <div class="perfil-usuario-header">
+                <div class="perfil-usuario-portada">
+                    <div class="perfil-usuario-avatar">
+                        <img id="avatar" src="../../assets/img/avatar.png" alt="avatar" onload="ajustarAltura(this)">
+                        <button onclick="abrirVentanaEmergente()" class="boton-foto-perfil" id="boton-foto"></button>
+                    </div>
+                </div>
+                
+                <div class="fondo-oscuro" id="fondoEmergente" style="display: none;"></div>
+                
+                <div class="ventana-emergente" id="ventanaEmergente" style="display: none;">
+                    <input type="text" id="nuevaFotoURL" placeholder="URL de la nueva foto"><br>
+                    <button onclick="actualizarFotoPerfil()">Actualizar foto con URL</button>
+                </div>
+                
+                
+            </div>
+
+            <div class="perfil-usuario-body">
+                <div class="perfil-usuario-bio">
+                    <h3 class="titulo"></h3> <!-- Acomodenlo bonito xd-->
+                    
+                </div>
+                <div class="perfil-usuario-footer">
+                    <ul class="lista-datos">
+                        <li><i class='fas fa-at'></i> Dirección de correo:</li>
+                        <li><input type="text" id="email" name="email" readonly></li>
+                        <li><i class='far fa-user-circle'></i> Nombre:</li>
+                        <li><input type="text" id="nombre" name="nombre" readonly></li>
+                        <li><i class='far fa-id-badge'></i> Apellido:</li>
+                        <li><input type="text" id="apellido" name="apellido" readonly></li>
+                        <li><i class='fas fa-id-card'></i> Cédula:</li>
+                        <li><input type="text" id="cedula" name="cedula" readonly></li>
+                    
+
+                    </ul>
+                    <ul class="lista-datos">
+                        <li><i class="icono fas fa-map-marker-alt"></i>Dirección:</li>
+                        <li><input type="text"  id="direccion" name="direccion"></li>
+                        <li><i class='far fa-map'></i> Código Postal:</li>
+                        <li><input type="text" id="codpostal"></li>
+                        <li><i class='fas fa-map-pin'></i> Cantón:</li>
+                        <li><input type="text" id="canton" readonly></li>
+                        <button class="boton-success" onclick="actualizarUsuario()">Guardar</button>
+
+                    </ul>
+                </div>
+            
+            </div>
+            <br>
+        </section>
+        <!--====  End of html  ====-->
+
+        <section id="seccionFacturas" class="seccion-facturas" style="display: none;">
+            <h2>Lista de Facturas</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th><i class='far fa-file-alt'></i>ID Factura</th>
+                        <th><i class='fas fa-check-square'></i> Fecha Pedido</th>
+                        <th> Total Facturado</th>
+                        <th><i class='fas fa-info-circle'></i> Estado</th>
+                        <th><i class='fas fa-check-square'></i> Fecha de Envío</th>
+                        <th>Productos Facturados</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    <!-- Aqui va el form dinamico -->
+                </tbody>
+            </table>
+        </section>
+
+
+        <!-- comunicate con nosotros mediante wsp -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://api.whatsapp.com/send?phone=+593 96 700 2303&text=Hola, deseo obtener más información" class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float "></i>
+    </a>
+
+<!-- fin comunicate con nosotros -->
+        <!-- fotter -->
+<footer class="container-fluid bg-color-info p-3 font-color-general text-center">
+    <p class="m-3">
+        DOLITTLE © 2024 - Todos los derechos reservados
+        <br>
+        Machala, El Oro, Ecuador.
+    </p>
+</footer>
+
+<!-- finfooter -->
+<script src="perfil.js"></script>
+<script src="../verificarAcceso.js"></script>
+  <!-- Incluir SweetAlert en tu HTML -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>

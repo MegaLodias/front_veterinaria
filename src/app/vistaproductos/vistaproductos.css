@@ -1,0 +1,342 @@
+body {
+    font-family: 'Underdog', cursive;
+}
+
+.containerVP {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.table {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    table-layout: fixed;
+}
+
+.table caption {
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 8px 0px;
+}
+
+.table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+}
+
+.table th, .table td {
+    font-size: 16px;
+    padding: 8px;
+    text-align: center;
+}
+
+.table thead th{ 
+    text-transform: uppercase;
+    background: #7dbd9a;
+    text-align: center;
+    font-weight: bold;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.table tbody td:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.table tbody button{
+  border-radius: 8px; 
+  background-color: #7dbd9a; 
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.table tbody button:hover{
+  background-color: #4f8f5b; 
+}
+
+@media screen and (max-width: 900px) {
+    .table {
+        border: 0px;
+    }
+    .table caption {
+        font-size: 22px;
+    }
+    .table thead {
+        display: none;
+    }
+    .table tr {
+        margin-bottom: 8px;
+        border-bottom: 4px solid #7ec19c;
+        display: block;
+    }
+    .table th, .table td {
+        font-size: 12px;
+    }
+    .table td {
+        display: block;
+        border-bottom: 1px solid #ddd;
+        text-align: right;
+    }
+    .table  td:last-child {
+        border-bottom: 0px;
+    }
+    .table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        float: left;
+    }
+}
+
+/* MADE LABURANDO -- ESTO ES ZONA DE PELIGRO -- */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+
+.modal-contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border: 1px solid #ddd; /* Borde del formulario */
+}
+/* Estilos para el encabezado "Nuevo Producto" */
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    background-color: #29b94d; /* Color de fondo del encabezado */
+    padding: 10px 20px; /* Espaciado interno del encabezado */
+    border-radius: 5px; /* Bordes redondeados */
+    color: white; /* Color del texto */
+}
+
+/* Estilos para el formulario de edición del producto en la ventana emergente */
+
+
+#editar-producto-form {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical; /* Permitir redimensionamiento vertical */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#guardar {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button#guardar:hover {
+    background-color: #45a049;
+}
+
+button#cerrar {
+    background-color: #f44336;
+    color: white;
+}
+
+button#cerrar:hover {
+    background-color: #d32f2f;
+}
+
+
+/* Estilos para el botón "Agregar Producto" */
+
+
+#btnAgregarProducto {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#btnAgregarProducto:hover {
+    background-color: #45a049;
+}
+
+
+/*agregar producto*/
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end; /* Alinear los botones a la derecha */
+    gap: 10px; /* Espacio entre los botones */
+}
+
+.form-actions button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-actions button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.form-actions button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.form-actions button[type="button"] {
+    background-color: #f44336;
+    color: white;
+}
+
+.form-actions button[type="button"]:hover {
+    background-color: #d32f2f;
+}
+
+
+
+/* Estilo para el campo de entrada de archivos oculto */
+#fotoInput {
+    display: none;
+}
+
+/* Estilo para la etiqueta de carga de archivos */
+.file-upload {
+    background-color: #7ab977;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.file-upload:hover {
+    background-color: #5cc073;
+}
+
+
+/*icono*/
+.file-upload {
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    padding-right: 30px; 
+    background-size: contain; 
+    height: 40px; 
+    display: inline-flex; 
+    align-items: center; 
+}
+
+.file-upload img {
+    max-width: 100%;
+    max-height: 100%; 
+}
+
+.error-message {
+    color: red; 
+}
+
+#register-btn {
+    opacity: 0.5; 
+}
+
+
+.two-column-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas con el mismo ancho */
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Espacio entre los grupos de formulario */
+}
+
+
+.form-actions {
+    grid-column: span 2; /* Ocupa el espacio de ambas columnas */
+    text-align: right; /* Alinea los botones a la derecha */
+}
+
+/* Estilos para el combobox */
+#CategoriasCombobox {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+#CategoriasCombobox option {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#CategoriasCombobox option:hover {
+    background-color: #f0f0f0;
+}
+
+#CategoriasCombobox:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Estilo para el icono de visto */
+#fotoUploadedIndicator {
+    margin-left: 10px; 
+    width: 20px; 
+    height: auto; 
+}
+

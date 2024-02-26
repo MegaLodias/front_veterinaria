@@ -1,0 +1,76 @@
+<!-- index.html (o tu archivo principal) -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+
+  <link rel="stylesheet" href="administrador.css">
+  <title>ProyectoPW</title>
+  <link rel="icon" href="../../assets/img/logo.png" type="image/x-icon">
+</head>
+
+<body> 
+
+  <!-- navbar -->
+  <ul class='nav-bar'>
+    <!-- Aqui es el navbar dinamico -->
+  </ul>
+  <!-- FIN NAVBAR -->
+
+  <!-- vista -->
+  <div class="mi-container">
+    <nav class="mi-nav">
+      <ul>
+        <li><a class="mi-logo">
+          <img src="../../assets/img/logoA.png">
+          <span class="mi-nav-item">Admi</span>
+        </a></li>
+      <li><a onclick="mostrarComponente('vistaproductos')" class="mi-nav-link">
+          <i class="fas fa-chart-area"></i>
+          <span class="mi-nav-item">Productos</span>
+        </a></li>
+      <li><a onclick="mostrarComponente('vistaenvios')" class="mi-nav-link">
+          <i class="fas fa-file-alt"></i>
+          <span class="mi-nav-item">Envios</span>
+        </a></li>
+      <li><a onclick="mostrarComponente('vistaclientes')" class="mi-nav-link">
+          <i class="fas fa-address-book"></i>
+          <span class="mi-nav-item">Clientes</span>
+        </a></li>
+      <li><a onclick="mostrarComponente('vistadetalles')" class="mi-nav-link">
+        <i class="fas fa-file-alt"></i>
+        <span class="mi-nav-item">Facturas</span>
+      </a></li>
+      <li><a href="../login/login.html"  class="mi-logout mi-nav-link" onclick="cerrarSesion()">
+          <i class="fas fa-sign-out-alt"></i>
+          <span class="mi-nav-item">Cerrar Sesion</span>
+        </a></li>
+      </ul>
+    </nav>
+  
+    <div class="mi-componentess"> 
+      <app-vistaproductos id="vistaproductos"></app-vistaproductos>
+      <app-vistafactura id="vistafactura"></app-vistafactura>
+      <app-vistaclientes id="vistaclientes"></app-vistaclientes>
+    </div>
+  </div>
+
+
+<!-- fin vista -->
+  <script src="administrador.js"></script>
+  <script src="../verificarAcceso.js"></script>
+  <!-- Incluir SweetAlert en tu HTML -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- fotter -->
+  <footer class="container-fluid bg-color-info p-3 font-color-general text-center">
+  <p class="m-3">
+    DOLITTLE © 2024 - Todos los derechos reservados
+    <br>
+    Machala, El Oro, Ecuador.
+  </p>
+</footer>
+
+<!-- finfooter -->
+</body>
+</html>
